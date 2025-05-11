@@ -1,0 +1,15 @@
+{
+  "name": "product-details",
+  "version": "1.0.0",
+  "description": "A simple Node.js server to serve product details.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

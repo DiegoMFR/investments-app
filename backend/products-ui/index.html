@@ -1,0 +1,707 @@
+<html lang="nl" data-uw-w-loader=""><head>
+    <meta charset="utf-8">
+    <title>Mijn rekeningen | Brand New Day</title>
+    <meta name="description" content="Onboarding">
+    <meta name="author" content="BrandNewDay">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- FAVICONS BEGIN -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3.0.0.23729">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3.0.0.23729">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3.0.0.23729">
+    <link rel="manifest" href="/site.webmanifest?v=3.0.0.23729">
+    <link rel="mask-icon" color="#333333" href="/safari-pinned-tab.svg?v=3.0.0.23729">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="/browserconfig.xml?v=3.0.0.23729">
+    <meta name="theme-color" content="#ffffff">
+    <!-- FAVICONS END -->
+    
+    <link href="content/mybnd/css/bootstrap.min.css" rel="stylesheet">
+    <link href="content/mybnd/css/pages/myOverviewV2.min.css" rel="stylesheet">
+    <link href="content/mybnd/css/main.min.css" rel="stylesheet">
+
+    <body>
+        <!-- LOADING SPINNER BEGIN -->
+        <div class="loadingSpinner hideSpinner">
+            <div class="spinner"></div>
+        </div>
+        <!-- LOADING SPINNER END-->
+
+        <header>
+            <div class="container draggableButtonWrapper">
+                <div class="draggableButton hiddenOnboarding ui-draggable ui-draggable-handle">
+                    <div class="icon feedback scaleBackgroundDown"></div>
+                </div>
+            </div>
+            <nav class="topBar">
+                <div class="container">
+                    <div class="logoWrapper">
+                        <a href="/">
+                            <img src="content/mybnd/images/dist/logos/header_logo.svg" width="61" alt="BrandNewDay Logo">
+                        </a>
+                    </div>
+                    <div class="navMenu">
+                        <ul>
+                            <li>
+                                <a href="/" title="Mijn rekeningen" class="activePage">
+                                    Mijn rekeningen
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/mijngegevens" title="Mijn gegevens">
+                                    Mijn gegevens
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/mijn-documenten" title="Mijn documenten">
+                                    Mijn documenten
+                                </a>
+                            </li>
+                                <li>
+                                    <a href="/mijn-tools" title="Mijn tools">
+                                        Mijn tools
+                                    </a>
+                                </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a class="logout" href="/mijn-gegevens/uitloggen">
+                                    Uitloggen
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dropdownWrapper">
+                        <div class="sideMenuOpenButton">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </div>
+                        <div class="sidrMenuContent">
+                            <ul>
+                                <li>
+                                    <a href="/" title="Mijn rekeningen">
+                                        Mijn rekeningen
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/mijngegevens" title="Mijn gegevens">
+                                        Mijn gegevens
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="myDocuments" href="/mijn-documenten">
+                                        Mijn documenten
+                                    </a>
+                                </li>
+                                    <li>
+                                        <a class="pensionTool" href="/mijn-tools">
+                                            Mijn tools
+                                        </a>
+                                    </li>
+                            </ul>
+                            <ul>
+                                <li class="logoutParent">
+                                    <a class="logout" href="/mijn-gegevens/uitloggen">
+                                        Uitloggen
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <nav class="bottomBar">
+                <div class="container">
+                    <div class="navTitle">
+                        <div class="leftMenuWrapper">
+                            <div class="leftMenuButton">
+                                <span class="line"></span>
+                                <span class="line"></span>
+                                <span class="line"></span>
+                            </div>
+                        </div>
+                        <div class="rightActionButton pull-right">
+                            <a href="/mijn-documenten-upload/" class="button primary next"><span>Upload</span> <span>een document</span></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="informationBoxBackground"></div>
+        <div class="container">
+            <div class="informationBox">
+                <div class="informationBoxAgent">
+                    <h5>Uw adviseur is</h5>
+                    <h3></h3>
+                    <div class="informationRow phone">
+                        <div class="icon"></div>
+                        <ul>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="informationRow email">
+                        <div class="icon"></div>
+                        <ul>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="informationBoxGeneral">
+                    <h3>Dag <span>Demo</span>, heeft u een vraag? <br>Wij helpen u graag!</h3>
+                    <div class="informationRow phone">
+                        <div class="icon"></div>
+                        <ul>
+                            <li>Bel ons op: <a href="tel:0207585310">020-758 5310</a></li>
+                            <li class="hidden">Bel ons op: <a href="tel:0207585300">020-758 5300</a></li>
+                            <li>Doordeweeks van <span>8:00 - 21:00</span></li>
+                            <li>Weekend van <span>10:00 - 17:30</span></li>
+                        </ul>
+                    </div>
+                    <div class="informationRow email">
+                        <div class="icon"></div>
+                        <ul>
+                            <li><a href="mailto:klant@brandnewday.nl">Stel ons uw vraag per mail</a></li>
+                            <li class="hidden"><a href="mailto:info@brandnewday.nl">Stel ons uw vraag per mail</a></li>
+                        </ul>
+                    </div>
+                    <div class="informationRow chat">
+                        <div class="icon"></div>
+                        <ul>
+                            <li><div data-id="PPUgNz-Vdex" class="livechat_button"><a href="#">Chat met een medewerker<div class="badge">ONLINE</div></a></div></li>
+                        </ul>
+                    </div>
+                    <div class="informationRow feedback">
+                        <div class="icon"></div>
+                        <ul>
+                            <li>
+                                <a href="" target="_blank" rel="noopener noreferrer">
+                                    Heeft u feedback? Laat het weten!
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="informationRow helpcenter">
+                        <div class="icon"></div>
+                        <ul>
+                            <li>
+                                <a href="" target="_blank" rel="noopener noreferrer">
+                                    Helpcenter
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="informationRow noIcon clientId">
+                        <ul>
+                            <li><p>Uw klantnummer is: <span>1825264</span></p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <section class="myOverviewV2 hideShimmers" data-products-url="/myoverviewv2/getproducts" data-balances-url="/myoverviewv2/getbalancevalues">
+                <div class="welcomeBanner">
+                    <div class="circles closing">
+                        <div class="bigCircle"></div>
+                        <div class="smallCircle"></div>
+                    </div>
+                    <div class="container">
+                        <h1>Goedemiddag!</h1>
+                        <div class="buttonWrapper">
+                            <div class="walkthrough deposit"></div>
+                            <a href="/eenmalige-inleg-ideal" class="button primary left idealLogo icon deposit">
+                                <span>
+                                    Direct storten
+                                </span>
+                            </a>
+                            <a href="/producten/nieuw" class="button secondary left plusWhite icon openNewAccount">
+                                <span>
+                                    Open een nieuwe rekening
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="lane shimmer totals">
+                    <div class="container">
+                        <div class="desktopTotals columns-2">
+                                <div class="boxTotal"></div>
+                                <div class="boxTotal"></div>
+                        </div>
+                        <div class="mobileTotals slick-initialized slick-slider" style="">
+                                <div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 10000px; transform: translate3d(0px, 0px, 0px);"><div class="boxTotal slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0"></div><div class="boxTotal slick-slide" data-slick-index="1" aria-hidden="true" tabindex="-1"></div></div></div>
+                                
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="lane shimmer investment">
+                    <div class="container">
+                        <span class="title"></span>
+                        <div class="productRow"></div>
+
+                            <div class="productRow"></div>
+
+                            <hr>
+                    </div>
+                </div>
+                <div class="lane shimmer savings">
+                    <div class="container">
+                        <span class="title"></span>
+                        <div class="productRow"></div>
+
+
+                    </div>
+                </div>
+                <div class="lane shimmer annuity">
+                    <div class="container">
+                        <span class="title"></span>
+                        <div class="productRow"></div>
+
+                            <div class="productRow"></div>
+
+                            <hr>
+                    </div>
+                </div>
+
+
+                <!-- REACT app insertion point -->
+                <section id="myreactapp"></section>
+
+            <div class="lane category totals">
+                <div class="container">
+                    <div class="desktopTotals columns-2">
+                        <div class="walkthrough desktopTotalsWalkthrough"></div>
+                                <div class="boxTotal investment">
+                                    <h3>
+                                        Mijn beleggingen
+                                    </h3>
+                                    <div>
+                                        Totale waarde
+                                    </div>
+                                    <h2 class="">€ 279</h2>
+                                </div>
+                                <div class="boxTotal savings">
+                                    <h3>
+                                        Mijn spaargeld
+                                    </h3>
+                                    <div>
+                                        Totale waarde
+                                    </div>
+                                    <h2 class="">€ 1.286</h2>
+                                </div>
+                    </div>
+                    <div class="mobileTotals slick-initialized slick-slider" style=""><div class="walkthrough mobileTotalsWalkthrough"></div><div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 10000px; transform: translate3d(0px, 0px, 0px);"><div class="boxTotal investment slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false">
+                                    <h3>
+                                        Mijn beleggingen
+                                    </h3>
+                                    <div>
+                                        Totale waarde
+                                    </div>
+                                    <h2 class="">€ 279</h2>
+                                </div><div class="boxTotal savings slick-slide" data-slick-index="1" aria-hidden="true">
+                                    <h3>
+                                        Mijn spaargeld
+                                    </h3>
+                                    <div>
+                                        Totale waarde
+                                    </div>
+                                    <h2 class="">€ 1.286</h2>
+                                </div></div></div></div>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="lane category investment">
+                <div class="container">
+                    <h2 class="title">
+                        <div class="walkthrough pension"></div>
+                        Mijn beleggingen
+                    </h2>
+                    
+                <a class="productRow" data-product-type="InvestmentFree" data-client-type="Single" data-iban="NL93BNDA0100158754" href="">
+                        <div class="gridColumn information">
+                            <div class="gridContent">
+                                <h4>Beleggen</h4>
+                                <p class="formatIban ibanFormat">NL93 BNDA 0100 1587 54</p>
+                            </div>
+                        </div>
+                        <div class="gridColumn deposit" style="visibility: hidden;">
+                            <div class="gridContent">
+                                <h4>Zelf storten</h4>
+                                <p>€ 0<span>per maand</span></p>
+                            </div>
+                        </div>
+                        <div class="gridColumn amount">
+                            <div class="gridContent">
+                                <h4>
+                                    Waarde
+                                </h4>
+                                <p class="">€ 91</p>
+                            </div>
+                        </div>
+                        <div class="gridColumn status">
+                            <div class="gridContent">
+                                <h4>
+                                    Status
+                                </h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </a><a class="productRow" data-product-type="InvestmentFree" data-client-type="Single" data-iban="NL91BNDA0100152000" href="">
+                        <div class="gridColumn information">
+                            <div class="gridContent">
+                                <h4>mfa testing command changes</h4>
+                                <p class="formatIban ibanFormat">NL91 BNDA 0100 1520 00</p>
+                            </div>
+                        </div>
+                        <div class="gridColumn deposit" style="visibility: hidden;">
+                            <div class="gridContent">
+                                <h4>Zelf storten</h4>
+                                <p>€ 0<span>per maand</span></p>
+                            </div>
+                        </div>
+                        <div class="gridColumn amount">
+                            <div class="gridContent">
+                                <h4>
+                                    Waarde
+                                </h4>
+                                <p class="">€ 0</p>
+                            </div>
+                        </div>
+                        <div class="gridColumn status">
+                            <div class="gridContent">
+                                <h4>
+                                    Status
+                                </h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </a><a class="productRow" data-product-type="InvestmentFree" data-client-type="Single" data-iban="NL59BNDA0100015709" href="">
+                        <div class="gridColumn information">
+                            <div class="gridContent">
+                                <h4>mfa also for testing changes</h4>
+                                <p class="formatIban ibanFormat">NL59 BNDA 0100 0157 09</p>
+                            </div>
+                        </div>
+                        <div class="gridColumn deposit" style="visibility: hidden;">
+                            <div class="gridContent">
+                                <h4>Zelf storten</h4>
+                                <p>€ 11<span>per maand</span></p>
+                            </div>
+                        </div>
+                        <div class="gridColumn amount">
+                            <div class="gridContent">
+                                <h4>
+                                    Waarde
+                                </h4>
+                                <p class="">€ 0</p>
+                            </div>
+                        </div>
+                        <div class="gridColumn status">
+                            <div class="gridContent">
+                                <h4>
+                                    Status
+                                </h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </a><a class="productRow" data-product-type="InvestmentFree" data-client-type="Double" data-iban="NL51BNDA0100071822" href="">
+                        <div class="gridColumn information">
+                            <div class="gridContent">
+                                <h4>Beleggen</h4>
+                                <p class="formatIban">met L</p>
+                            </div>
+                        </div>
+                        <div class="gridColumn deposit" style="visibility: visible;">
+                            <div class="gridContent">
+                                <h4>Automatische incasso</h4>
+                                <p>€ 122<span>per jaar</span></p>
+                            </div>
+                        </div>
+                        <div class="gridColumn amount">
+                            <div class="gridContent">
+                                <h4>
+                                    Waarde
+                                </h4>
+                                <p class="">€ 188</p>
+                            </div>
+                        </div>
+                        <div class="gridColumn status">
+                            <div class="gridContent">
+                                <h4>
+                                    Status
+                                </h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </a><hr></div>
+            </div>
+            <div class="lane category savings">
+                <div class="container">
+                    <h2 class="title">
+                        <div class="walkthrough pension"></div>
+                        Mijn spaargeld
+                    </h2>
+                    
+                <a class="productRow" data-product-type="SavingsFree" data-client-type="Single" data-iban="NL84BNDA0100070937" href="">
+                        <div class="gridColumn information">
+                            <div class="gridContent">
+                                <h4>Sparen</h4>
+                                <p class="formatIban ibanFormat">NL84 BNDA 0100 0709 37</p>
+                            </div>
+                        </div>
+                        <div class="gridColumn deposit" style="visibility: hidden;">
+                            <div class="gridContent">
+                                <h4>Zelf storten</h4>
+                                <p>€ 0<span>onbekend</span></p>
+                            </div>
+                        </div>
+                        <div class="gridColumn amount">
+                            <div class="gridContent">
+                                <h4>
+                                    Waarde
+                                </h4>
+                                <p class="">€ 100</p>
+                            </div>
+                        </div>
+                        <div class="gridColumn status">
+                            <div class="gridContent">
+                                <h4>
+                                    Status
+                                </h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </a><a class="productRow" data-product-type="SavingsFree" data-client-type="Single" data-iban="NL42BNDA0100181982" href="">
+                        <div class="gridColumn information">
+                            <div class="gridContent">
+                                <h4>With withdrawal money</h4>
+                                <p class="formatIban ibanFormat">NL42 BNDA 0100 1819 82</p>
+                            </div>
+                        </div>
+                        <div class="gridColumn deposit" style="visibility: hidden;">
+                            <div class="gridContent">
+                                <h4>Zelf storten</h4>
+                                <p>€ 0<span>onbekend</span></p>
+                            </div>
+                        </div>
+                        <div class="gridColumn amount">
+                            <div class="gridContent">
+                                <h4>
+                                    Waarde
+                                </h4>
+                                <p class="">€ 1.186</p>
+                            </div>
+                        </div>
+                        <div class="gridColumn status">
+                            <div class="gridContent">
+                                <h4>
+                                    Status
+                                </h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </a><hr></div>
+            </div>
+            <div class="lane category annuity">
+                <div class="container">
+                    <h2 class="title">
+                        <div class="walkthrough pension"></div>
+                        Mijn uitkeringen
+                    </h2>
+                    
+                <a class="productRow" data-product-type="Lijfrente-uitkering" data-client-type="Unknown" data-iban="NL32BNDA0100095444" href="">
+                        <div class="gridColumn information">
+                            <div class="gridContent">
+                                <h4>Lijfrente-uitkering</h4>
+                                <p class="formatIban ibanFormat">NL32 BNDA 0100 0954 44</p>
+                            <span class="status" data-status="inbehandeling">In behandeling</span></div>
+                        </div>
+                        <div class="gridColumn deposit" style="visibility: hidden;">
+                            <div class="gridContent">
+                                <h4>Bruto uitkering</h4>
+                                <p>€ 0<span>onbekend</span></p>
+                            </div>
+                        </div>
+                        <div class="gridColumn amount">
+                            <div class="gridContent">
+                                <h4>
+                                    Waarde
+                                </h4>
+                                <p class="shimmerAmount">€ 0<span>onbekend</span></p>
+                            </div>
+                        </div>
+                        <div class="gridColumn status" data-status="inbehandeling">
+                            <div class="gridContent">
+                                <h4>
+                                    Status
+                                </h4>
+                                <p>In behandeling</p>
+                            </div>
+                        </div>
+                    </a></div>
+            </div>
+
+            <div class="lane newAccount">
+                <div class="container">
+                    <hr>
+                    <div class="boxBanner newAccountBannerImage-pension">
+            <div class="walkthrough pensionBanner"></div>
+            <div class="icon"></div>
+            <div class="contentBanner">
+                <label data-toggle="popover" data-title="" data-content="">
+                    
+                </label>
+                <p>
+                    Iedereen een extra pensioenpotje. <br>Kom in actie en ga sparen of beleggen voor uw pensioen.
+                </p>
+            </div>
+            <a href="producten/nieuw" class="link">
+                Aan de slag
+            </a>
+            </div>
+                </div>
+            </div>
+
+            </section>
+            <!-- MODAL BEGIN -->
+            <div class="modal fade centerFix" id="errorMessage" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" data-dismiss="modal" aria-hidden="true"></button>
+                            <h1 class="modal-title"></h1>
+                        </div>
+                        <div class="modal-body">
+                            <div class="box">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="button secondary" data-dismiss="modal">Sluiten</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MODAL END -->
+        </div>
+        <footer>
+            <div class="footerActionButtons">
+                <div class="container">
+                    <button name="button" class="button primary next right icon arrowWhite" type="button">Rekening openen<span></span></button>
+                    <button name="button" class="button secondary" type="button">Annuleren</button>
+                </div>
+            </div>
+            <div class="footerLinks">
+                <div class="container">
+                    <div class="col-xs-6">
+                        <h4>Onze producten</h4>
+                        <div class="col-xs-12 col-sm-6">
+                            <ul>
+                                <li><a href="" target="_blank">Pensioenrekening-beleggen</a></li>
+                                <li><a href="" target="_blank">Lijfrente-uitkering</a></li>
+                                <li><a href="" target="_blank">Spaarrekening</a></li>
+                                <li><a href="" target="_blank">ZZP pensioen</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <ul>
+                                <li><a href="" target="_blank">Overstappen</a></li>
+                                <li><a href="" target="_blank">Pensioenrekening-sparen</a></li>
+                                <li><a href="" target="_blank">Beleggingsrekening</a></li>
+                                <li><a href="" target="_blank">Kinderrekening</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <h4>Handige links</h4>
+                        <div class="col-xs-12 col-sm-6">
+                            <ul>
+                                <li><a href="" target="_blank">Blog</a></li>
+                                <li><a href="" target="_blank">Documenten</a></li>
+                                <li><a href="" target="_blank">Jaarruimte</a></li>
+                                <li><a href="" target="_blank">Koersen</a></li>
+                                <li><a href="" target="_blank">Vind je adviseur</a></li>
+                                <li><a href="" target="_blank">Responsible disclosure</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <ul>
+                                <li><a href="" target="_blank">Disclaimer</a></li>
+                                <li><a href="" target="_blank">Factsheets fondsen</a></li>
+                                <li><a href="" target="_blank">Jaarverslagen</a></li>
+                                <li><a href="" target="_blank">Vacatures</a></li>
+                                <li><a href="" target="_blank">Privacy- en cookiestatement</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerSocialMedia">
+                <div class="container">
+                    <div class="footerSocialMediaWrapper">
+                        <p>BrandNewDay © 2025</p>
+                        <ul>
+                            <li><a href="" target="_blank" class="center-block linkedin"></a></li>
+                            <li><a href="" target="_blank" class="center-block twitter"></a></li>
+                            <li><a href="" target="_blank" class="center-block facebook"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/jqueryUiTouch.min.js"></script>
+        <script src="/js/accounting.min.js"></script>
+        <script src="/js/momentLocales.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/sidr.min.js"></script>
+        <script src="/js/main.min.js"></script>
+        <div id="sidr-menu" style="transition: right 0.2s ease-in-out;" class="sidr right">
+            <div class="sidr-inner">
+                <ul>
+                    <li>
+                        <a href="/" title="Mijn rekeningen">
+                            Mijn rekeningen
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/mijngegevens" title="Mijn gegevens">
+                            Mijn gegevens
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidr-class-myDocuments" href="/mijn-documenten">
+                            Mijn documenten
+                        </a>
+                    </li>
+                        <li>
+                            <a class="sidr-class-pensionTool" href="/mijn-tools">
+                                Mijn tools
+                            </a>
+                        </li>
+                </ul>
+                <ul>
+                    <li class="sidr-class-logoutParent">
+                        <a class="sidr-class-logout" href="/mijn-gegevens/uitloggen">
+                            Uitloggen
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            var pageTitle = 'Mijn rekeningen',
+                errorParameter = '';
+        </script>
+
+        <script src="/js/accounting.min.js"></script>
+        <script src="/js/momentLocales.min.js"></script>
+        <script src="/js/myOverviewV2.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+@import '../assets/css/tokens.css';
+
+  
+  .product-section {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: var(--spacing-md);
+    box-sizing: border-box;
+  
+    h1 {
+      font-size: var(--text-3xl);
+      font-weight: var(--font-semibold);
+      color: var(--text-neutral-900);
+      margin-bottom: var(--spacing-lg);
+      border-bottom: var(--border-width) solid var(--border-color);
+      padding-bottom: var(--spacing-sm);
+    }
+  
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-medium);
+      color: var(--text-neutral-800);
+      margin-bottom: var(--spacing-md);
+    }
+  
+    section {
+      margin-bottom: var(--spacing-10);
+    }
+  
+    ul {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--spacing-md);
+  
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0;
+      }
+    }
+  
+    li {
+      background-color: var(--bg-white);
+      border-radius: var(--rounded-lg);
+      padding: var(--spacing-md);
+      list-style: none;
+      margin: 0;
+  
+      span {
+        font-size: var(--text-lg);
+        font-weight: var(--font-semibold);
+      }
+    }
+  
+    .pension span {
+      color: var(--text-blue-800);
+    }
+  
+    .investment span {
+      color: var(--text-green-700);
+    }
+  
+    .loading {
+      color: var(--text-gray-600);
+    }
+  
+    .error {
+      color: var(--text-red-600);
+    }
+  }
+  

@@ -1,0 +1,68 @@
+[
+    {
+        "clientId": "12345",
+        "currency": "EUR",
+        "type": "pension_investment",
+        "iban": "NL93BNDA0100158754",
+        "debit": {
+            "amount": 0.0,
+            "frequency": "monthly"
+        },
+        "value": 91.0
+    },
+    {
+        "clientId": "12345",
+        "currency": "EUR",
+        "type": "pension_savings",
+        "iban": "NL91BNDA0100152000",
+        "debit": {
+            "amount": 0.0,
+            "frequency": "monthly"
+        },
+        "value": 0.0
+    },
+    {
+        "clientId": "12345",
+        "currency": "EUR",
+        "type": "investment",
+        "iban": "NL59BNDA0100015709",
+        "debit": {
+            "amount": 11.0,
+            "frequency": "monthly"
+        },
+        "value": 0.0
+    },
+    {
+        "clientId": "12345",
+        "currency": "EUR",
+        "type": "investment",
+        "iban": "NL84BNDA0100070937",
+        "debit": {
+            "amount": 0.0,
+            "frequency": "monthly"
+        },
+        "value": 100.0
+    },
+    {
+        "clientId": "12345",
+        "currency": "EUR",
+        "type": "investment",
+        "iban": "NL42BNDA0100181982",
+        "debit": {
+            "amount": 0.0,
+            "frequency": "monthly"
+        },
+        "value": 1186.0
+    },
+    {
+        "clientId": "12345",
+        "currency": "EUR",
+        "type": "investment",
+        "iban": "NL32BNDA0100095444",
+        "debit": {
+            "amount": 0.0,
+            "frequency": "monthly"
+        },
+        "value": 0.0
+    }
+]
