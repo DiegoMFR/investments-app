@@ -22,7 +22,11 @@ export default function App() {
               <ProductOverview />
             </ProtectedRoute>
           } />
-          <Route path="/detail/:clientId/:iban" element={<Detail />} />
+          <Route path="/detail/:clientId/:iban" element={
+            <ProtectedRoute>
+              <Detail />
+            </ProtectedRoute>
+            } />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>

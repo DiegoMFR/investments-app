@@ -1,1 +1,0 @@
-import './components/product-section.css';
