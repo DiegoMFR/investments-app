@@ -17,13 +17,12 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/papa" element={<div>Welcome</div>} />
           <Route path="/" element={
             <ProtectedRoute>
               <ProductOverview />
             </ProtectedRoute>
           } />
-          <Route path="/detail" element={<Detail />} />
+          <Route path="/detail/:iban" element={<Detail />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>

@@ -1,14 +1,12 @@
 import { useEffect, useRef } from "react";
 
 interface Props {
-  clientId: string;
+  url: string;
+  title?: string;
   onLoad?: (iframeDocument: Document) => void;
 }
 
-// TODO decouple source requests from the iframe
-export default function LegacyEmbed({ clientId, onLoad }: Props) {
-  const token = sessionStorage.getItem('access_token');
-  const src = `/product/overview/${clientId}?token=${encodeURIComponent(token!)}`;
+export default function LegacyEmbed({ url, title, onLoad }: Props) {
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
 
@@ -18,12 +16,6 @@ export default function LegacyEmbed({ clientId, onLoad }: Props) {
 
     const handleLoad = () => {
       const doc = iframe.contentDocument || iframe.contentWindow?.document;
-      // const styleTags = Array.from(document.head.querySelectorAll('style, link[rel="stylesheet"]'));
-
-      // styleTags.forEach((tag) => {
-      //   doc?.head.appendChild(tag.cloneNode(true));
-      // });  
-      
       if (doc && onLoad) onLoad(doc);
     };
 
@@ -34,8 +26,8 @@ export default function LegacyEmbed({ clientId, onLoad }: Props) {
   return (
       <iframe
         ref={iframeRef}
-        src={src}
-        title="Legacy Product Detail"
+        src={url}
+        title={title}
         style={{ height: '100vh', width: '100vw', border: 'none' }}
       />
   );

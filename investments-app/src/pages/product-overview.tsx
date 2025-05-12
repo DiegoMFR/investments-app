@@ -1,39 +1,28 @@
-import { useState } from 'react';
-import LegacyEmbed from '../components/legacy-embed';
-import { ProductSection } from '../components/product-section';
 import { createPortal } from 'react-dom';
-import globalStyles from '../components/product-section.css?inline';
+import { useShadowMount } from '../hooks/use-shadow-mount';
+import { ProductSection } from '../components/product-section';
+import styles from './product-overview.css?inline';
+import LegacyEmbed from '../components/legacy-embed';
 
 export default function ProductOverview() {
-  const clientId = sessionStorage.getItem('client_id') as string;
-  const [shadowRoot, setShadowRoot] = useState<ShadowRoot | null>(null);
+  const clientId = sessionStorage.getItem('client_id');
+  const token = sessionStorage.getItem('access_token');
 
-  const handleIframeLoad = (iframeDoc: Document) => {
-    const section = iframeDoc.getElementById('myreactapp');
-    if (!section) return;
+  const { shadowRoot, mountToShadowRoot } = useShadowMount(styles);
 
-    // Attach Shadow DOM
-    const shadow = section.attachShadow({ mode: 'open' });
-
-    // Inject styles
-    const styleEl = document.createElement('style');
-    styleEl.textContent = globalStyles;
-    shadow.appendChild(styleEl);
-
-    // Create mount node
-    const mountPoint = document.createElement('div');
-    shadow.appendChild(mountPoint);
-
-    setShadowRoot(shadow);
-  };
+  if (!clientId || !token) return null;
 
   return (
-    <div>
-      <section>
-      <ProductSection clientId={clientId} />
-        <LegacyEmbed clientId={clientId} onLoad={handleIframeLoad} />
-        {shadowRoot && createPortal(<ProductSection clientId={clientId} />, shadowRoot)}
-      </section>
-    </div>
+    <>
+    <ProductSection clientId={clientId} />
+      {/* The embedded legacy page */}
+      <LegacyEmbed
+        url={`/product/overview/${clientId}?token=${encodeURIComponent(token)}`}
+        title="Legacy Product Detail"
+        onLoad={(doc) => mountToShadowRoot(doc, 'myreactapp')}
+      />
+      {/* The React component */}
+      {shadowRoot && createPortal(<ProductSection clientId={clientId} />, shadowRoot)}
+    </>
   );
 }

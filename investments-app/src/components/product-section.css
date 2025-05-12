@@ -6,6 +6,7 @@
     margin: auto;
     padding: var(--spacing-md);
     box-sizing: border-box;
+    position: relative;
   
     h1 {
       font-size: var(--text-3xl);
