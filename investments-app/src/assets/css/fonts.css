@@ -1,0 +1,67 @@
+
+/* Museo Slab */
+@font-face {
+    font-family: 'museo-slab';
+    src: url('../fonts/MuseoSlab-500-normal.woff2') format('woff2'),
+         url('../fonts/MuseoSlab-500-normal.woff') format('woff'),
+         url('../fonts/MuseoSlab-500-normal.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  /* Museo Sans - Light (300) */
+  @font-face {
+    font-family: 'museo-sans';
+    src: url('../fonts/MuseoSans-300-normal.woff2') format('woff2'),
+         url('../fonts/MuseoSans-300-normal.woff') format('woff'),
+         url('../fonts/MuseoSans-300-normal.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  /* Museo Sans - Regular (500) */
+  @font-face {
+    font-family: 'museo-sans';
+    src: url('../fonts/MuseoSans-500-normal.woff2') format('woff2'),
+         url('../fonts/MuseoSans-500-normal.woff') format('woff'),
+         url('../fonts/MuseoSans-500-normal.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  /* Museo Sans - Black (900) */
+  @font-face {
+    font-family: 'museo-sans';
+    src: url('../fonts/MuseoSans-900-normal.woff') format('woff'),
+         url('../fonts/MuseoSans-900-normal.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  /* Glyphicons Halflings */
+  @font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'),
+         url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
+         url('../fonts/glyphicons-halflings-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Material Icons Regular */
+  @font-face {
+    font-family: 'Material Icons';
+    src: url('../fonts/MaterialIcons-Regular.woff2') format('woff2'),
+         url('../fonts/MaterialIcons-Regular.woff') format('woff'),
+         url('../fonts/MaterialIcons-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+:root, :host {
+    --font-family-sans-serif: 'museo-sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-family-serif: 'museo-slab', serif;
+  }
+  
+  

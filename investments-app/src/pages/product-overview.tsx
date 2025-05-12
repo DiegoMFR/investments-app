@@ -1,7 +1,7 @@
 import { createPortal } from 'react-dom';
 import { useShadowMount } from '../hooks/use-shadow-mount';
 import { ProductSection } from '../components/product-section';
-import styles from './product-overview.css?inline';
+import styles from './shadow.css?inline';
 import LegacyEmbed from '../components/legacy-embed';
 
 export default function ProductOverview() {

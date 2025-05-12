@@ -2,7 +2,7 @@
 :host, :root {
     --text-neutral-900: #171717;
     --text-neutral-800: #262626;
-    --text-gray-600: #4b5563;
+    --text-gray-600: #474747;
     --text-red-600: #dc2626;
     --text-blue-800: #1e40af;
     --text-green-700: #15803d;
@@ -14,6 +14,11 @@
   
     --rounded-lg: 8px;
     --border-color: #e5e7eb;
+
+    --border-blue: #07568a;
+    --border-pink: #e66082;
+    --border-green: #0ba287;
+
     --border-width: 1px;
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   
@@ -27,6 +32,8 @@
     --text-3xl: 30px;
   
     --max-width: 100%;
+
+    --leading-relaxed: 1.625rem;
   
     @media (min-width: 480px) {
       & {
