@@ -1,6 +1,6 @@
 import { createPortal } from 'react-dom';
 import { useShadowMount } from '../hooks/use-shadow-mount';
-import { ProductSection } from '../components/product-section';
+import { ProductSection } from '../components/product/product-section';
 import styles from './product-overview.shadow.css?inline';
 import LegacyEmbed from '../components/legacy-embed';
 
@@ -14,7 +14,6 @@ export default function ProductOverview() {
 
   return (
     <>
-    <ProductSection clientId={clientId} />
       {/* The embedded legacy page */}
       <LegacyEmbed
         url={`/product/overview/${clientId}?token=${encodeURIComponent(token)}`}

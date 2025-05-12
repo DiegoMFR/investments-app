@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { fetchProducts } from '../api/products';
-import { Product } from '../types';
+import { fetchProducts } from '../../api/products';
+import { Product } from '../../types';
 import { ProductList } from './product-list';
 import './product-section.css';
 import { ProducTotals } from './product-totals';
@@ -44,14 +44,14 @@ export const ProductSection = ({ clientId }: Props) => {
     <section>
       <h2>{title}</h2>
       {items.length > 0
-        ? <ProductList items={items} type={type} />
+        ? <ProductList items={items} type={type} clientId={clientId}/>
         : <p>No {type} products found.</p>}
     </section>
   );
 
   return (
     <div className="product-section">
-      <ProducTotals totals={categorized.totals} />
+      <ProducTotals totals={categorized.totals} currency={products[0]?.currency}/>
       <hr />
       {renderSection('Pension Products', categorized.pension, 'pension')}
       <hr />

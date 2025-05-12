@@ -1,0 +1,50 @@
+@import '../assets/css/tokens.css';
+@import '../assets/css/fonts.css';
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-xl);
+  gap: var(--spacing-4);
+
+  .detail-title {
+    font-size: var(--text-3xl);
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .detail-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: var(--spacing-4);
+    gap: var(--spacing-md);
+
+    p {
+      margin: 0;
+      line-height: 1.6;
+      color: var(--color-text);
+
+      strong {
+        color: var(--color-text-strong);
+      }
+    }
+  }
+
+  .detail-message {
+    padding: var(--spacing-md);
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+
+    &.error {
+      color: var(--color-error);
+    }
+  }
+}

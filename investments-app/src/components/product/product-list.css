@@ -1,5 +1,5 @@
-@import '../assets/css/tokens.css';
-@import '../assets/css/fonts.css';
+@import '../../assets/css/tokens.css';
+@import '../../assets/css/fonts.css';
 
 .product-list {
   font-family: var(--font-family-sans-serif);

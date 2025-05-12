@@ -1,7 +1,7 @@
 /* We group here all CSS that will be consumed in the shadow container */
 
 @import '../index.css';
-@import '../components/product-list.css';
-@import '../components/product-section.css';
-@import '../components/product-totals.css';
+@import '../components/product/product-list.css';
+@import '../components/product/product-section.css';
+@import '../components/product/product-totals.css';
 

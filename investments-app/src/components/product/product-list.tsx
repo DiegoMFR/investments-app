@@ -1,18 +1,19 @@
 import { Link } from 'react-router';
-import { Product } from '../types';
+import { Product } from '../../types';
 import './product-list.css';
-import { getCurrencySymbol } from '../utils/utils';
+import { getCurrencySymbol } from '../../utils/utils';
 
 interface Props {
   items: Product[];
   type: 'pension' | 'investment';
+  clientId: string;
 }
 
-export const ProductList = ({ items, type }: Props) => (
+export const ProductList = ({ items, type, clientId }: Props) => (
   <ul className={`product-list ${type}`}>
     {items.map((product) => (
       <li key={product.iban} className="product-card">
-        <Link to={`/detail/${product.iban}`} className="product-card-link">
+        <Link to={`/detail/${clientId}/${product.iban}`} className="product-card-link">
 
           <div className="product-content">
             <h4>{type === 'pension' ? 'Pension' : 'Investment'}</h4>
