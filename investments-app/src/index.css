@@ -10,6 +10,15 @@ body {
   background-color: var( --bg-neutral);
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--border-color);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  border-bottom: 1px solid #fff;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-serif);
 }

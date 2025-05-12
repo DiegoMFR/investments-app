@@ -1,9 +1,10 @@
+import { useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { fetchProducts } from '../api/products';
-import { useMemo } from 'react';
-import './product-section.css';
 import { Product } from '../types';
 import { ProductList } from './product-list';
+import './product-section.css';
+import { ProducTotals } from './product-totals';
 
 interface Props {
   clientId: string;
@@ -11,7 +12,7 @@ interface Props {
 
 export const ProductSection = ({ clientId }: Props) => {
   const {
-    data: products,
+    data: products = [],
     isLoading,
     error,
   } = useQuery<Product[]>({
@@ -19,33 +20,43 @@ export const ProductSection = ({ clientId }: Props) => {
     queryFn: () => fetchProducts(clientId),
   });
 
-  const categorizedProducts = useMemo(() => {
+  const categorized = useMemo(() => {
+    const pension = products.filter(p => p.type === 'pension_savings');
+    const investment = products.filter(p => p.type === 'investment');
+
+    const totalValue = (items: Product[]) =>
+      items.reduce((sum, p) => sum + p.value, 0).toFixed(2);
+
     return {
-      pension: products?.filter((p) => p.type === 'pension_savings') || [],
-      investment: products?.filter((p) => p.type === 'investment') || [],
+      pension,
+      investment,
+      totals: {
+        pension: totalValue(pension),
+        investment: totalValue(investment),
+      },
     };
   }, [products]);
 
-  if (isLoading) return <p className="loading">Loading products...</p>;
-  if (error instanceof Error) return <p className="error">Error: {error.message}</p>;
+  if (isLoading) return <p className="loading" aria-live="polite">Loading products...</p>;
+  if (error instanceof Error) return <p className="error" aria-live="assertive">Error: {error.message}</p>;
+
+  const renderSection = (title: string, items: Product[], type: 'pension' | 'investment') => (
+    <section>
+      <h2>{title}</h2>
+      {items.length > 0
+        ? <ProductList items={items} type={type} />
+        : <p>No {type} products found.</p>}
+    </section>
+  );
 
   return (
     <div className="product-section">
-      <h1>Product Overview</h1>
-
-      <section>
-        <h2>Pension Products</h2>
-        {categorizedProducts.pension.length > 0
-          ? <ProductList items={categorizedProducts.pension} type="pension" />
-          : <p>No pension products found.</p>}
-      </section>
-
-      <section>
-        <h2>Investment Products</h2>
-        {categorizedProducts.investment.length > 0
-          ? <ProductList items={categorizedProducts.investment} type="investment" />
-          : <p>No investment products found.</p>}
-      </section>
+      <ProducTotals totals={categorized.totals} />
+      <hr />
+      {renderSection('Pension Products', categorized.pension, 'pension')}
+      <hr />
+      {renderSection('Investment Products', categorized.investment, 'investment')}
+      <hr />
     </div>
   );
 };

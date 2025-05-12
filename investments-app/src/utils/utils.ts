@@ -11,3 +11,16 @@ export function isTokenExpired(token: string): boolean {
     return true;
   }
 }
+
+export const getCurrencySymbol = (currency: string) => {
+  switch (currency) {
+    case 'EUR':
+      return '€';
+    case 'USD':
+      return '$';
+    case 'GBP':
+      return '£';
+    default:
+      return currency;
+  }
+}
