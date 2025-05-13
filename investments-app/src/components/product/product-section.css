@@ -5,7 +5,7 @@
 .product-section {
   max-width: var(--max-width);
   margin: auto;
-  padding: var(--spacing-md);
+  padding: var(--padding-width);
   box-sizing: border-box;
   position: relative;
 

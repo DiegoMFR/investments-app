@@ -40,18 +40,14 @@
     --text-3xl: 32px;
   
     --max-width: 100%;
+    --padding-width: 20px;
 
     --leading-relaxed: 1.625rem;
   
     @media (min-width: 480px) {
       & {
-        --max-width: 480px;
-      }
-    }
-  
-    @media (min-width: 640px) {
-      & {
-        --max-width: 640px;
+        /* --max-width: 630px; */
+        --padding-width: 0;
       }
     }
   
@@ -60,12 +56,12 @@
         --max-width: 720px;
       }
     }
-  
-    @media (min-width: 1024px) {
+
+    @media (min-width: 992px) {
       & {
         --max-width: 970px;
       }
-    }
+  }
   
     @media (min-width: 1200px) {
       & {

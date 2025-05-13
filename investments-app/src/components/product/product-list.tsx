@@ -20,6 +20,7 @@ export const ProductList = ({ items, type, clientId }: Props) => (
             <p className='iban'>{product.iban}</p>
             <p>Debit: {product.debit.amount} ({product.debit.frequency})</p>
           </div>
+          <div className='spacer'></div>
           <div className='product-value'>
             <h4 className='title'>
               Value:
